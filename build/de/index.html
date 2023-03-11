@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="theme-color" content="#3b82f6" />
+
+		<meta property="og:image" content="../og.png" />
+		<meta property="og:type" content="website" />
+
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout.a5c496eb.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.8f86ec05.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.e503be3a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.9ee94a5c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.6b218dfd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control.e7f5239e.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.a0df639c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/config.30a5bf93.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.66c0db09.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.e15d00df.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/i18n.63757b31.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.6dfec3fe.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.js.e489f57e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.0e374fa7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/(localized)-layout.svelte.7215c391.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/(localized)-layout.js.c6cde818.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.cde1dd64.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/(localized)-_locale_locale_-page.svelte.8c20267d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/MetaOg.e1430189.js"><title>Lauftempo-Rechner</title><!-- HEAD_svelte-1szeoh3_START --><!-- HEAD_svelte-1szeoh3_END --><!-- HEAD_svelte-tje834_START --><link rel="manifest" href="/de/manifest.json"><!-- HEAD_svelte-tje834_END --><!-- HEAD_svelte-sgyo6n_START --><meta property="og:title" content="Winziger Rechner für Distanz, Zeit und Tempo des Läufers."><meta property="og:description" content="Bearbeiten Sie zwei beliebige, der dritte wird berechnet."><meta property="og:type" content="website"><!-- HEAD_svelte-sgyo6n_END -->
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0XM98ZF9VT"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-0XM98ZF9VT');
+		</script>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+
+
+
+
+<div class="vh100 flex flex-col"><header class="bg-blue-500 text-white flex items-center"><a href="/de/" class="inline-block p-4 leading-none hover:bg-white hover:bg-opacity-25 invisible"><span class="sr-only"><!-- HTML_TAG_START --><span data-i18n="header.home">Zurück zur Einleitung</span><!-- HTML_TAG_END --></span>
+		<svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"></path></svg></a>
+	<h1 class="flex-1 text-center font-semibold text-xl leading-none">
+		<!-- HTML_TAG_START --><span data-i18n="/(localized)/[locale=locale].header.title">Laufender Rechner</span><!-- HTML_TAG_END --></h1>
+	<a href="/de/settings" class="inline-block p-4 leading-none hover:bg-white hover:bg-opacity-25"><span class="sr-only"><!-- HTML_TAG_START --><span data-i18n="header.settings">Einstellungen</span><!-- HTML_TAG_END --></span>
+		<svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"></path></svg></a></header>
+	<div class="flex-1 flex flex-col divide-y">
+
+<section class="flex-1 overflow-hidden flex flex-col group"><div class="text-center opacity-75 group-hover:opacity-100 flex-1 flex flex-col justify-center"><h2 class="text-lg font-semibold"><!-- HTML_TAG_START --><span data-i18n="distance.title">Distanz</span><!-- HTML_TAG_END --></h2></div>
+	<div class="fhi flex-1 flex justify-center items-center"><div class=""><select class="text-right appearance-none p-2 rounded cursor-pointer bg-white ring-1 ring-gray-300 hover:bg-gray-100 focus:bg-gray-100 focus:ring-1 focus:outline-0 "><option value="0"> 0</option><option value="1"> 1</option><option value="2"> 2</option><option value="3"> 3</option><option value="4"> 4</option><option value="5"> 5</option><option value="6"> 6</option><option value="7"> 7</option><option value="8"> 8</option><option value="9"> 9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option></select></div>
+	<div class="h-full flex items-center">.</div>
+	<div class=""><select class="text-right appearance-none p-2 rounded cursor-pointer bg-white ring-1 ring-gray-300 hover:bg-gray-100 focus:bg-gray-100 focus:ring-1 focus:outline-0 "><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option><option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option><option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option><option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option><option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option></select></div>
+
+	<select class="text-center appearance-none p-2 rounded cursor-pointer bg-transparent ring-0 hover:bg-transparent focus:bg-transparent focus:ring-0 focus:outline-0 ml-4 text-gray-700 " style="max-width: calc(1* (2.5rem + 2.5vw));"><option value="">⋮</option><option value="42:20">Marathon</option><option value="21:10">Halbmarathon</option><option value="1:61">Eine Meile</option></select></div>
+
+	<div class="text-center opacity-75 text-sm font-light flex-1 flex flex-col justify-center "><code>(km)</code></div></section>
+<section class="flex-1 overflow-hidden flex flex-col group"><div class="text-center opacity-75 group-hover:opacity-100 flex-1 flex flex-col justify-center"><h2 class="text-lg font-semibold"><!-- HTML_TAG_START --><span data-i18n="time.title">Zeit</span><!-- HTML_TAG_END --></h2></div>
+	<div class="fhi flex-1 flex justify-center items-center"><div class=""><select class="text-right appearance-none p-2 rounded cursor-pointer bg-white ring-1 ring-gray-300 hover:bg-gray-100 focus:bg-gray-100 focus:ring-1 focus:outline-0 "><option value="0"> 0</option><option value="1"> 1</option><option value="2"> 2</option><option value="3"> 3</option><option value="4"> 4</option><option value="5"> 5</option><option value="6"> 6</option><option value="7"> 7</option><option value="8"> 8</option></select></div>
+	<div class="h-full flex items-center">:</div>
+	<div class=""><select class="text-right appearance-none p-2 rounded cursor-pointer bg-white ring-1 ring-gray-300 hover:bg-gray-100 focus:bg-gray-100 focus:ring-1 focus:outline-0 "><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select></div>
+	<div class="h-full flex items-center">:</div>
+	<div class=""><select class="text-right appearance-none p-2 rounded cursor-pointer bg-white ring-1 ring-gray-300 hover:bg-gray-100 focus:bg-gray-100 focus:ring-1 focus:outline-0 "><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select></div></div>
+
+	<div class="text-center opacity-75 text-sm font-light flex-1 flex flex-col justify-center "><code>(h:mm:ss)</code></div></section>
+<section class="flex-1 overflow-hidden flex flex-col group"><div class="text-center opacity-75 group-hover:opacity-100 flex-1 flex flex-col justify-center"><h2 class="text-lg font-semibold"><!-- HTML_TAG_START --><span data-i18n="tempo.title">Tempo</span><!-- HTML_TAG_END --></h2></div>
+	<div class="fhi flex-1 flex justify-center items-center"><div class=""><select class="text-right appearance-none p-2 rounded cursor-pointer bg-white ring-1 ring-gray-300 hover:bg-gray-100 focus:bg-gray-100 focus:ring-1 focus:outline-0 "><option value="0"> 0</option><option value="1"> 1</option><option value="2"> 2</option><option value="3"> 3</option><option value="4"> 4</option><option value="5"> 5</option><option value="6"> 6</option><option value="7"> 7</option><option value="8"> 8</option><option value="9"> 9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option></select></div>
+	<div class="h-full flex items-center">:</div>
+	<div class=""><select class="text-right appearance-none p-2 rounded cursor-pointer bg-white ring-1 ring-gray-300 hover:bg-gray-100 focus:bg-gray-100 focus:ring-1 focus:outline-0 "><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select></div></div>
+
+	<div class="text-center opacity-75 text-sm font-light flex-1 flex flex-col justify-center "><code>(mm:ss / km)</code></div></section></div>
+	<footer class="p-2 text-xs text-center bg-gray-200"><div class="font-light opacity-75 space-x-1"><a href="mailto:marian@meres.sk">marian@meres.sk</a>
+		<span>|</span>
+		<a href="https://github.com/marianmeres/tempo" target="_blank">source</a></div></footer></div>
+
+
+			
+			<script>
+				{
+					__sveltekit_39zdtp = {
+						env: {"PUBLIC_BASE_PATH":""},
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.8f86ec05.js"),
+						import("../_app/immutable/entry/app.a0df639c.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_39zdtp.element, {
+							node_ids: [0, 2, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

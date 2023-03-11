@@ -1,6 +1,6 @@
 # tempo.meres.sk
 
-Tiny [svelte based](https://svelte.dev/) web app calculator of
+Tiny [svelte kit based](https://kit.svelte.dev/) web app calculator of
 runner's **distance**, **time** and **pace**.
 
 See online at [tempo.meres.sk](http://tempo.meres.sk)

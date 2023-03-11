@@ -25,7 +25,7 @@ const _createStorage = (type) => {
 			setItem: (key, value) => void 0,
 			getItem: (key) => null,
 			removeItem: (key) => void 0,
-			clear: () => void 0,
+			clear: () => void 0
 		};
 	}
 
