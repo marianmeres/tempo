@@ -22,7 +22,7 @@ export const i18nData = hoistLastKey({
 		menu: {
 			marathon: { sk: 'Maratón', en: 'Marathon', de: 'Marathon' },
 			halfmarathon: { sk: 'Polmaratón', en: 'Half marathon', de: 'Halbmarathon' },
-			mile: { sk: 'Míľa', en: 'A mile', de: 'Eine Meile' }
+			mile: { sk: 'Míľa', en: 'Mile', de: 'Eine Meile' }
 		}
 	},
 	time: {
