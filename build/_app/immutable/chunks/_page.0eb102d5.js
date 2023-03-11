@@ -1,1 +1,0 @@
-import{R as o}from"./control.e7f5239e.js";import{b as t}from"./paths.1d09713a.js";import{D as a}from"./config.5f633217.js";function n(e,r){return new o(e,r)}new TextEncoder;async function c({url:e,fetch:r,params:i}){throw n(301,`${t}/${a}/`)}const m=Object.freeze(Object.defineProperty({__proto__:null,load:c},Symbol.toStringTag,{value:"Module"}));export{m as _,c as l};
