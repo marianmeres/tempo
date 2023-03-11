@@ -2,22 +2,21 @@
 	import NumberSelect from './NumberSelect.svelte';
 	import Row from './Row.svelte';
 	import Separator from './Separator.svelte';
-	import { DEFAULT_LOCALE, i18nLocale } from '../stores/i18n.js';
 	import {
 		lastCalcTarget,
-		OUT_OF_DISPLAY_RANGE,
 		setTempo,
 		TEMPO,
 		tempo,
 	} from '../stores/tempo.js';
 	import { createClog } from '@marianmeres/clog';
+	import { createTranslate } from "$lib/i18n.js";
+	import { page } from "$app/stores";
 
-	const clog = createClog('Tempo.svelte');
+	const clog = createClog('Tempo');
+	let t = createTranslate('tempo');
 
-	const title = {
-		sk: 'Tempo',
-		en: 'Pace',
-	};
+	let i18n = {};
+	$: i18n = $page.data.i18n;
 
 	let m = 0;
 	let s = 0;
@@ -27,12 +26,12 @@
 	$: {
 		error = null;
 		[m, s] = tempo.toVals($tempo);
-		if (m > max) error = OUT_OF_DISPLAY_RANGE;
+		if (m > max) error = t(i18n, '/out_of_display_range');
 	}
 </script>
 
 <Row
-	title={title[$i18nLocale] || title[DEFAULT_LOCALE]}
+	title={t(i18n, 'title')}
 	unit="mm:ss / km"
 	hi={$lastCalcTarget === TEMPO}
 	{error}

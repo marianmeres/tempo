@@ -3,7 +3,6 @@
 	import Time from '../../components/Time.svelte';
 	import Tempo from '../../components/Tempo.svelte';
 	import { createClog } from '@marianmeres/clog';
-	import { distance, tempo, time } from '../../stores/tempo.js';
 
 	const clog = createClog('Index');
 
