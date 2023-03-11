@@ -3,7 +3,7 @@
 Tiny [svelte kit based](https://kit.svelte.dev/) web app calculator of
 runner's **distance**, **time** and **pace**.
 
-See online at [tempo.meres.sk](http://tempo.meres.sk)
+See online at [tempo.meres.sk](https://tempo.meres.sk)
 
 For best mobile viewing experience add bookmark to your home screen and open from there (should be
 [displayed in fullscreen mode](https://developer.mozilla.org/en-US/docs/Web/Manifest/display)).
