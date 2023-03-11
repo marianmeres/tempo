@@ -1,6 +1,4 @@
-# including static sites build in repo
-#/build
-
+/build
 .DS_Store
 node_modules
 /.svelte-kit
