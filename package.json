@@ -18,6 +18,7 @@
 		"env-cmd": "^10.1.0",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.4",
+		"prettier-plugin-svelte": "^2.9.0",
 		"rimraf": "^4.4.0",
 		"sass": "^1.59.2",
 		"svelte": "^3.54.0",

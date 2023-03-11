@@ -3,14 +3,9 @@
 	import Row from './Row.svelte';
 	import Separator from './Separator.svelte';
 	import { createClog } from '@marianmeres/clog';
-	import {
-		lastCalcTarget,
-		setTime,
-		TIME,
-		time,
-	} from '../stores/tempo.js';
-	import { createTranslate } from "$lib/i18n.js";
-	import { page } from "$app/stores";
+	import { lastCalcTarget, setTime, TIME, time } from '../stores/tempo.js';
+	import { createTranslate } from '$lib/i18n.js';
+	import { page } from '$app/stores';
 
 	const clog = createClog('Time');
 	let t = createTranslate('time');
@@ -31,12 +26,7 @@
 	}
 </script>
 
-<Row
-	title={t(i18n, 'title')}
-	unit="h:mm:ss"
-	hi={$lastCalcTarget === TIME}
-	{error}
->
+<Row title={t(i18n, 'title')} unit="h:mm:ss" hi={$lastCalcTarget === TIME} {error}>
 	<NumberSelect
 		to={max}
 		padWith="&nbsp;"

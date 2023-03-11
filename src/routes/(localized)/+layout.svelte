@@ -1,15 +1,15 @@
 <script>
 	import { base } from '$app/paths';
-	import { page } from "$app/stores";
+	import { page } from '$app/stores';
 
-	import Header from "$lib/components/layout/Header.svelte";
-	import Footer from "$lib/components/layout/Footer.svelte";
+	import Header from '$lib/components/layout/Header.svelte';
+	import Footer from '$lib/components/layout/Footer.svelte';
 
 	export let data;
 </script>
 
 <svelte:head>
-	<link rel="manifest" href="{base}/{$page.params.locale}/manifest.json">
+	<link rel="manifest" href="{base}/{$page.params.locale}/manifest.json" />
 </svelte:head>
 
 <div class="vh100 flex flex-col">

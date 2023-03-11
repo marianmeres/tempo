@@ -5,7 +5,7 @@
 	export let error = null;
 </script>
 
-<div
+<section
 	class="
 		flex-1 overflow-hidden flex flex-col group
 		{$$props.class || ''}
@@ -20,7 +20,7 @@
 		class:opacity-100={hi}
 		class:font-bold={hi}
 	>
-		<span class="text-lg font-semibold">{@html title}</span>
+		<h2 class="text-lg font-semibold">{@html title}</h2>
 	</div>
 	{#if error}
 		<div class="text-center text-red-700 px-4">{@html error}</div>
@@ -38,4 +38,4 @@
 	>
 		<code>({unit})</code>
 	</div>
-</div>
+</section>

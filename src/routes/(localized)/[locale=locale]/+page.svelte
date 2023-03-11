@@ -1,10 +1,10 @@
 <script>
-	import Distance from "$lib/components/Distance.svelte";
-	import Time from "$lib/components/Time.svelte";
-	import Tempo from "$lib/components/Tempo.svelte";
-	import MetaOg from "$lib/components/MetaOg.svelte";
-	import { createTranslate } from "$lib/i18n.js";
-	import { page } from "$app/stores";
+	import Distance from '$lib/components/Distance.svelte';
+	import Time from '$lib/components/Time.svelte';
+	import Tempo from '$lib/components/Tempo.svelte';
+	import MetaOg from '$lib/components/MetaOg.svelte';
+	import { createTranslate } from '$lib/i18n.js';
+	import { page } from '$app/stores';
 
 	let t = createTranslate(null);
 	$: t = createTranslate($page.route.id);

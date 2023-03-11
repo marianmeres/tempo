@@ -2,15 +2,10 @@
 	import NumberSelect from './NumberSelect.svelte';
 	import Row from './Row.svelte';
 	import Separator from './Separator.svelte';
-	import {
-		lastCalcTarget,
-		setTempo,
-		TEMPO,
-		tempo,
-	} from '../stores/tempo.js';
+	import { lastCalcTarget, setTempo, TEMPO, tempo } from '../stores/tempo.js';
 	import { createClog } from '@marianmeres/clog';
-	import { createTranslate } from "$lib/i18n.js";
-	import { page } from "$app/stores";
+	import { createTranslate } from '$lib/i18n.js';
+	import { page } from '$app/stores';
 
 	const clog = createClog('Tempo');
 	let t = createTranslate('tempo');
@@ -30,12 +25,7 @@
 	}
 </script>
 
-<Row
-	title={t(i18n, 'title')}
-	unit="mm:ss / km"
-	hi={$lastCalcTarget === TEMPO}
-	{error}
->
+<Row title={t(i18n, 'title')} unit="mm:ss / km" hi={$lastCalcTarget === TEMPO} {error}>
 	<NumberSelect
 		padWith="&nbsp;"
 		to={max}
