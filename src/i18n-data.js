@@ -5,9 +5,9 @@ import { ROUTE } from './config.js';
 export const i18nData = hoistLastKey({
 	header: {
 		title: {
-			en: 'Running calculator',
+			en: 'Running pace calculator',
 			sk: 'Bežecká kalkulačka',
-			de: 'Laufender Rechner'
+			de: 'Läufer-Rechner'
 		},
 		settings: { en: 'Settings', sk: 'Nastavenie', de: 'Einstellungen' },
 		home: { en: 'Back to home', sk: 'Späť na úvod', de: 'Zurück zur Einleitung' }
