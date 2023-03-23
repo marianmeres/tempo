@@ -22,6 +22,7 @@ export function GET({ params }) {
 		],
 		background_color: '#ffffff',
 		theme_color: '#3b82f6',
-		display: 'fullscreen'
+		display: 'fullscreen',
+		scope: '../'
 	});
 }
