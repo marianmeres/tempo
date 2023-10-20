@@ -31,3 +31,7 @@ a {
 	font-weight: bold;
 	line-height: 1;
 }
+
+[disabled] {
+	cursor: not-allowed;
+}

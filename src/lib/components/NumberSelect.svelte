@@ -9,6 +9,7 @@
 	export let to = 59;
 	export let padLength = 2;
 	export let padWith = '0';
+	export let disabled = false;
 
 	export let value;
 
@@ -28,6 +29,7 @@
 <div class="">
 	<select
 		bind:value
+		{disabled}
 		on:change={() => dispatch('change', parseInt(value, 10))}
 		class="
 			text-right appearance-none p-2 rounded cursor-pointer

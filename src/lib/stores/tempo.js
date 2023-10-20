@@ -1,6 +1,7 @@
 import { writable, get, derived } from 'svelte/store';
 import { createClog } from '@marianmeres/clog';
 import { hms } from '$lib/hms.js';
+import { lock } from '$lib/stores/lock.js';
 
 const clog = createClog('tempo');
 
@@ -53,6 +54,13 @@ _last2changes.subscribe((v) => {
 });
 
 const logChange = (what) => {
+	// with lock special case
+	const _lock = get(lock);
+	if (_lock) {
+		return _last2changes.set([...new Set([_lock, what])]);
+	}
+
+	//
 	let _last2 = get(_last2changes);
 	const lastIdx = Math.max(0, _last2.length - 1);
 	if (_last2[lastIdx] !== what) _last2.push(what);

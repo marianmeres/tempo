@@ -6,7 +6,9 @@ const clog = createClog('i18n');
 export const createTranslate = (ns) => {
 	const createPath = (ns, path) => {
 		if (ns === null) return `${path}`.toLowerCase();
-		return (path.startsWith('/') ? `${path}`.slice(1) : `${ns}.${path}`).toLowerCase();
+		return (
+			`${path || ''}`.startsWith('/') ? `${path}`.slice(1) : `${ns}.${path}`
+		).toLowerCase();
 	};
 
 	const wrap = (id, v) => `<span data-i18n="${id}">${v}</span>`;

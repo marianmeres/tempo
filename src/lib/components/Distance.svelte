@@ -1,14 +1,18 @@
 <script>
+	import { page } from '$app/stores';
+	import { createTranslate } from '$lib/i18n.js';
+	import { lock } from '$lib/stores/lock.js';
+	import { createClog } from '@marianmeres/clog';
+	import { DISTANCE, distance, lastCalcTarget, setDistance } from '../stores/tempo.js';
 	import NumberSelect from './NumberSelect.svelte';
 	import Row from './Row.svelte';
 	import Separator from './Separator.svelte';
-	import { DISTANCE, distance, lastCalcTarget, setDistance } from '../stores/tempo.js';
-	import { createClog } from '@marianmeres/clog';
-	import { createTranslate } from '$lib/i18n.js';
-	import { page } from '$app/stores';
 
 	const clog = createClog('Distance');
 	let t = createTranslate('distance');
+
+	const id = DISTANCE;
+	$: isLocked = $lock === id;
 
 	let i18n = {};
 	$: i18n = $page.data.i18n;
@@ -27,12 +31,13 @@
 	let u = '';
 </script>
 
-<Row title={t(i18n, 'title')} unit="km" hi={$lastCalcTarget === DISTANCE} {error}>
+<Row {id} title={t(i18n, 'title')} unit="km" hi={$lastCalcTarget === DISTANCE} {error}>
 	<NumberSelect
 		to={max}
 		padWith="&nbsp;"
 		value={km}
 		on:change={({ detail }) => setDistance(detail, dec)}
+		disabled={isLocked}
 	/>
 	<Separator value="." />
 	<NumberSelect
@@ -40,6 +45,7 @@
 		padWith="0"
 		value={dec}
 		on:change={({ detail }) => setDistance(km, detail)}
+		disabled={isLocked}
 	/>
 
 	<select
@@ -51,6 +57,7 @@
 		"
 		style="max-width: calc(1* (2.5rem + 2.5vw));"
 		bind:value={u}
+		disabled={isLocked}
 		on:change={(e) => {
 			if (u) {
 				const [km, dec] = u.split(':');

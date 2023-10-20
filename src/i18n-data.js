@@ -56,6 +56,10 @@ export const i18nData = hoistLastKey({
 		header: {
 			title: { en: 'Settings', sk: 'Nastavenia', de: 'Einstellungen' }
 		}
+	},
+	row: {
+		lock: { en: 'Lock', sk: 'Zamkni', de: 'Abschließen' },
+		unlock: { en: 'Unlock', sk: 'Odomkni', de: 'Aufschließen' }
 	}
 });
 
