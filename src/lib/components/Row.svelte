@@ -13,6 +13,7 @@
 	export let unit = '';
 	export let hi = false;
 	export let error = null;
+	export let lockVisible = true;
 
 	let i18n = {};
 	$: i18n = $page.data.i18n;
@@ -37,13 +38,15 @@
 		class:font-bold={hi}
 	>
 		<div class="flex items-center">
-			<div class="w-16 ml-4">&nbsp</div>
+			<div class="w-12 ml-4" class:hidden={!lockVisible}>&nbsp</div>
 			<h2 class="text-lg font-semibold flex-1">{@html title}</h2>
 			<button
 				class="
-					w-12 h-12 mr-4 flex items-center justify-center
-					bg-transparent focus:bg-transparent active:bg-transparent
-				"
+				w-12 h-12 mr-4 flex items-center justify-center
+				bg-transparent focus:bg-transparent active:bg-transparent
+			"
+				disabled={!lockVisible}
+				class:hidden={!lockVisible}
 				class:text-gray-500={!isLocked}
 				class:text-black={isLocked}
 				on:click={() => ($lock = isLocked ? null : id)}

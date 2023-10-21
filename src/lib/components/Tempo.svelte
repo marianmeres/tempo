@@ -27,6 +27,8 @@
 		[m, s] = tempo.toVals($tempo);
 		if (m > max) error = t(i18n, '/out_of_display_range');
 	}
+
+	$: lockVisible = !!(m || s);
 </script>
 
 <Row
@@ -35,6 +37,7 @@
 	unit="mm:ss / km"
 	hi={$lastCalcTarget === TEMPO}
 	{error}
+	{lockVisible}
 >
 	<NumberSelect
 		padWith="&nbsp;"

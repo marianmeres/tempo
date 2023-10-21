@@ -29,9 +29,18 @@
 	}
 
 	let u = '';
+
+	$: lockVisible = !!(km || dec);
 </script>
 
-<Row {id} title={t(i18n, 'title')} unit="km" hi={$lastCalcTarget === DISTANCE} {error}>
+<Row
+	{id}
+	title={t(i18n, 'title')}
+	unit="km"
+	hi={$lastCalcTarget === DISTANCE}
+	{error}
+	{lockVisible}
+>
 	<NumberSelect
 		to={max}
 		padWith="&nbsp;"

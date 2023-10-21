@@ -28,9 +28,18 @@
 		[h, m, s] = time.toVals($time);
 		if (h > max) error = t(i18n, '/out_of_display_range');
 	}
+
+	$: lockVisible = !!(h || m || s);
 </script>
 
-<Row {id} title={t(i18n, 'title')} unit="h:mm:ss" hi={$lastCalcTarget === TIME} {error}>
+<Row
+	{id}
+	title={t(i18n, 'title')}
+	unit="h:mm:ss"
+	hi={$lastCalcTarget === TIME}
+	{error}
+	{lockVisible}
+>
 	<NumberSelect
 		to={max}
 		padWith="&nbsp;"
