@@ -33,8 +33,9 @@
 		on:change={() => dispatch('change', parseInt(value, 10))}
 		class="
 			text-right appearance-none p-2 rounded cursor-pointer
-			bg-white ring-1 ring-gray-300
-			hover:bg-gray-100 focus:bg-gray-100 focus:ring-1 focus:outline-0
+			bg-transparent
+			enabled:bg-white enabled:ring-1 enabled:ring-gray-300
+			enabled:hover:bg-gray-100 focus:bg-gray-100 focus:ring-1 focus:outline-0
 		"
 	>
 		{#each options as v (v)}

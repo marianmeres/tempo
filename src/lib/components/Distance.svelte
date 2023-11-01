@@ -57,28 +57,30 @@
 		disabled={isLocked}
 	/>
 
-	<select
-		class="
+	{#if !isLocked}
+		<select
+			class="
 			text-center appearance-none p-2 rounded cursor-pointer
 			bg-transparent ring-0
 			hover:bg-transparent focus:bg-transparent focus:ring-0 focus:outline-0
 			ml-4 text-gray-700
 		"
-		style="max-width: calc(1* (2.5rem + 2.5vw));"
-		bind:value={u}
-		disabled={isLocked}
-		on:change={(e) => {
-			if (u) {
-				const [km, dec] = u.split(':');
-				setDistance(km, dec);
-			}
-			u = '';
-			e.target.blur();
-		}}
-	>
-		<option value="">⋮</option>
-		<option value="42:20">{t.raw(i18n, 'menu.marathon')}</option>
-		<option value="21:10">{t.raw(i18n, 'menu.halfmarathon')}</option>
-		<option value="1:61">{t.raw(i18n, 'menu.mile')}</option>
-	</select>
+			style="max-width: calc(1* (2.5rem + 2.5vw));"
+			bind:value={u}
+			disabled={isLocked}
+			on:change={(e) => {
+				if (u) {
+					const [km, dec] = u.split(':');
+					setDistance(km, dec);
+				}
+				u = '';
+				e.target.blur();
+			}}
+		>
+			<option value="">⋮</option>
+			<option value="42:20">{t.raw(i18n, 'menu.marathon')}</option>
+			<option value="21:10">{t.raw(i18n, 'menu.halfmarathon')}</option>
+			<option value="1:61">{t.raw(i18n, 'menu.mile')}</option>
+		</select>
+	{/if}
 </Row>
