@@ -80,6 +80,10 @@
 			<option value="">⋮</option>
 			<option value="42:20">{t.raw(i18n, 'menu.marathon')}</option>
 			<option value="21:10">{t.raw(i18n, 'menu.halfmarathon')}</option>
+			<option value="10:00">10 km</option>
+			<option value="5:00">5 km</option>
+			<option value="3:00">3 km</option>
+			<option value="1:50">1.5 km</option>
 			<option value="1:61">{t.raw(i18n, 'menu.mile')}</option>
 		</select>
 	{/if}
