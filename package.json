@@ -1,6 +1,6 @@
 {
 	"name": "@marianmeres/tempo",
-	"version": "1.4.1",
+	"version": "1.4.2",
 	"scripts": {
 		"clean": "rimraf build/*",
 		"dev": "env-cmd vite dev",
